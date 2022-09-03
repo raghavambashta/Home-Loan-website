@@ -1,0 +1,76 @@
+<div style="background-color: transparent">
+  <div class="main wrapper">
+    <div class="container">
+      <section class="calmain">
+        <div class="calcontent">
+          <div>
+            <mat-card id="card" style="border-radius: 6px">
+              <h2 class="text-center">EMI Calculator</h2>
+              <table>
+                <tr class="table-1">
+                  <td id="head">Amount</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      style="margin-left: 100px"
+                      #loanRange
+                      type="text"
+                      (ngModelChange)="setLoan(loanRange.value)"
+                      name="loan"
+                      [(ngModel)]="loan"
+                      min="0"
+                      max="1000000"
+                    />
+                  </td>
+                </tr>
+                <tr class="table-1">
+                  <td id="head">Year</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      #timeRange
+                      type="range"
+                      name="time"
+                      (ngModelChange)="setTime(timeRange.value)"
+                      [(ngModel)]="time"
+                      style="margin-left: 100px"
+                      min="1"
+                      max="10"
+                    />
+                  </td>
+                  <td id="loanVal">{{ time }}</td>
+                </tr>
+                <tr class="table-1">
+                  <td id="head">ROI (per anum)</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      name="roi"
+                      [(ngModel)]="roi"
+                      readonly
+                      style="margin-left: 100px; border: 0ch"
+                    />
+                  </td>
+                </tr>
+              </table>
+
+              <button
+                style="margin-left: 150px; margin-top: 20px"
+                class="calculate"
+                mat-raised-button
+                color="primary"
+                (click)="div()"
+              >
+                Calculate EMI
+              </button>
+              <br />
+              <div class="anss">
+                <h3 style="margin-left: 150px">EMI: {{ num3 }} per month</h3>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

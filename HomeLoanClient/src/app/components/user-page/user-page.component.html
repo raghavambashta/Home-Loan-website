@@ -1,0 +1,313 @@
+<div class="row p-1" style="margin-top: 50px">
+  <div class="col-6 offset-3">
+    <div class="d-grid">
+      <a routerLink="/login">
+        <button
+          type="submit"
+          style="
+            background-color: lightcoral;
+            color: #fefbf6;
+            border-style: none;
+            border-radius: 5px;
+            height: 40px;
+          "
+        >
+          Logout
+        </button></a
+      >
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="border p-3 rounded-3" style="background-color: #fefbf6">
+        <div class="row p-3">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+              <h2>Peronal</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> User Id : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].id }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> First Name : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].firstName }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Middle Name: </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].middleName }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Last Name : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].lastName }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Date Of Birth: </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].dob | date: "mediumDate" }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Gender : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].gender }} </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Nationality : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].nationality }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Aadhaar : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].aadharNum }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Pan : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].panNum }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button
+              type="submit"
+              style="
+                background-color: #277bc0;
+                color: #fefbf6;
+                border-style: none;
+                border-radius: 5px;
+                height: 40px;
+                padding-left: 10px;
+                padding-right: 10px;
+              "
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="row">
+        <div class="border p-3 rounded-3" style="background-color: #fefbf6">
+          <div class="row p-3">
+            <div class="col-6 offset-3">
+              <div class="d-grid">
+                <h2>Income</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col mb-3">
+              <span>Type : </span>
+            </div>
+            <div class="col mb-3">
+              <span> {{ applicantdata[0].empType }}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <span> Company : </span>
+            </div>
+            <div class="col mb-3">
+              <span> {{ applicantdata[0].empName }}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <span> Company Type : </span>
+            </div>
+            <div class="col mb-3">
+              <span> {{ applicantdata[0].orgType }}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <span> Income : </span>
+            </div>
+            <div class="col mb-3">
+              <span> {{ applicantdata[0].income }}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <button
+                type="submit"
+                style="
+                  background-color: #277bc0;
+                  color: #fefbf6;
+                  border-style: none;
+                  border-radius: 5px;
+                  height: 40px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                "
+              >
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="border p-3 rounded-3" style="background-color: #fefbf6">
+        <div class="row p-3">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+              <h2>Property</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mb-3">
+            <span> Name : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].propName }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Locality : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].locality }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> City : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].city }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> State : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].state }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Pin Code : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].pin }}</span>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+              <button
+                type="submit"
+                style="
+                  background-color: #277bc0;
+                  color: #fefbf6;
+                  border-style: none;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="border p-3 rounded-3" style="background-color: #fefbf6">
+        <div class="row p-3">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+              <h2>Bank</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mb-3">
+            <span>Bank Name : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].bankName }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span> Account Number : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].accNum }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <span>IFSC Code : </span>
+          </div>
+          <div class="col mb-3">
+            <span> {{ applicantdata[0].ifsc }}</span>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+              <button
+                type="submit"
+                style="
+                  background-color: #277bc0;
+                  color: #fefbf6;
+                  border-style: none;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

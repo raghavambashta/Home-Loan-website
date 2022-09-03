@@ -1,0 +1,34 @@
+<div class="nav1">
+  <!--Header-->
+  <div class="logo">Homely</div>
+  <div class="nav-list-container">
+    <div class="navli1"><a routerLink="/home">Home</a></div>
+    <div class="navli1"><a routerLink="/login">Login</a></div>
+    <div class="navli1">
+      <a routerLink="/eligibility">Eligibility Calculator</a>
+    </div>
+    <div class="navli1">
+      <a routerLink="/emicalculator">EMI Calculator</a>
+    </div>
+    <div class="navli1">
+      <a routerLink="/cibil">CIBIL Score</a>
+    </div>
+    <div class="navli1"><a routerLink="/faq">FAQ</a></div>
+    <div class="navli1"><a routerLink="/about">About</a></div>
+    <div
+      class="navli1"
+      style="
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ff0000;
+        border-radius: 8%;
+      "
+    >
+      <a routerLink="/admin">Admin</a>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="animate">
+  <router-outlet></router-outlet>
+</div>

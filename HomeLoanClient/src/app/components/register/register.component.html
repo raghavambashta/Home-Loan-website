@@ -1,0 +1,131 @@
+<div>
+  <form
+    style="background-color: #fefbf6"
+    [formGroup]="registerForm"
+    (ngSubmit)="registerSubmitted(cred)"
+    class="border p-3 rounded-3"
+  >
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Register</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="Id" class="form-label">User Id</label>
+        <input
+          [(ngModel)]="cred.Id"
+          type="number"
+          class="form-control"
+          id="Id"
+          formControlName="Id"
+        />
+        <div
+          class="form-text text-danger"
+          *ngIf="Id.errors?.['required'] && (Id.touched || Id.dirty)"
+        >
+          Id is required.
+        </div>
+        <div
+          class="form-text text-danger"
+          *ngIf="Id.errors?.['Id'] && (Id.touched || Id.dirty)"
+        >
+          User Id.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="email" class="form-label">Email Id</label>
+        <input
+          [(ngModel)]="cred.Email"
+          type="text"
+          class="form-control"
+          id="email"
+          formControlName="email"
+        />
+        <div
+          class="form-text text-danger"
+          *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)"
+        >
+          Email Id is required.
+        </div>
+        <div
+          class="form-text text-danger"
+          *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)"
+        >
+          Invalid Email Id.
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input
+          [(ngModel)]="cred.MobileNum"
+          type="text"
+          class="form-control"
+          id="mobile"
+          formControlName="mobile"
+        />
+        <div
+          class="form-text text-danger"
+          *ngIf="Mobile.errors?.['required'] && 
+        (Mobile.touched || Mobile.dirty)"
+        >
+          Mobile Number is required.
+        </div>
+        <div
+          class="form-text text-danger"
+          *ngIf="Mobile.errors?.['pattern'] && 
+        (Mobile.touched || Mobile.dirty)"
+        >
+          Invalid Number
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="pwd" class="form-label">Password</label>
+        <input
+          [(ngModel)]="cred.Password"
+          type="password"
+          class="form-control"
+          id="pwd"
+          formControlName="pwd"
+        />
+        <div
+          class="form-text text-danger"
+          *ngIf="PWD.errors?.['required'] && (PWD.touched || PWD.dirty)"
+        >
+          Enter Password
+        </div>
+      </div>
+      <div class="col mb-3">
+        <label for="rpwd" class="form-label">Re-Enter Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="rpwd"
+          formControlName="rpwd"
+        />
+        <div class="form-text text-danger" [ngStyle]="{ display: repeatPass }">
+          Password didn't match.
+        </div>
+      </div>
+    </div>
+    <div class="row p-3">
+      <div class="col-6 offset-3">
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <span>Already have an account?&nbsp;</span>
+        <a routerLink="/login">Login!</a>
+      </div>
+    </div>
+  </form>
+</div>

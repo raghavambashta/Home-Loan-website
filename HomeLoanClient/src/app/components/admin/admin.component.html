@@ -1,0 +1,64 @@
+<form
+  class="border p-3 rounded-3"
+  style="background-color: #fefbf6"
+  [formGroup]="adminForm"
+  (ngSubmit)="adminLogin()"
+>
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Admin Login</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="Username.errors?.['required'] && (Username.dirty || Username.touched) "
+      >
+        Username is required.
+      </div>
+    </div>
+    <div class="col mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pdw"
+        formControlName="pwd"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="PWD.errors?.['required'] && (PWD.dirty || PWD.touched)"
+      >
+        Password is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button
+          type="submit"
+          [disabled]="adminForm.invalid"
+          style="
+            background-color: #277bc0;
+            color: #fefbf6;
+            border-style: none;
+            border-radius: 5px;
+            height: 40px;
+          "
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

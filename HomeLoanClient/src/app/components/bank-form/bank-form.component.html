@@ -1,0 +1,109 @@
+<form
+  style="background-color: #fefbf6"
+  class="border p-3 rounded-3"
+  [formGroup]="bankForm"
+  (ngSubmit)="bankSubmitted(bank)"
+>
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Bank Details</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="bid" class="form-label">User Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="bid"
+        [(ngModel)]="bank.BId"
+        formControlName="bid"
+      />
+    </div>
+    <div class="col mb-3">
+      <label for="cid" class="form-label">Credendial Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cid"
+        formControlName="cid"
+        [(ngModel)]="bank.CId"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="name" class="form-label">Bank Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+        [(ngModel)]="bank.Name"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)"
+      >
+        Bank Name is required.
+      </div>
+    </div>
+
+    <div class="col mb-3">
+      <label for="accnum" class="form-label">Account Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Locality"
+        formControlName="Locality"
+        [(ngModel)]="bank.AccNum"
+      />
+    </div>
+    <div
+      class="form-text text-danger"
+      *ngIf="AccNum.errors?.['required'] && (AccNum.touched || AccNum.dirty)"
+    >
+      Account Number is required.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="ifsc" class="form-label">IFSC Code</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ifsc"
+        [(ngModel)]="bank.Ifsc"
+        formControlName="ifsc"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="Ifsc.errors?.['required'] && (Ifsc.touched || Ifsc.dirty)"
+      >
+        IFSC Code is required.
+      </div>
+    </div>
+    <div class="col ps-3">
+      <label for="cibil" class="form-label">CIBIL Score</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cibil"
+        [(ngModel)]="bank.Cibil"
+        formControlName="cibil"
+      />
+      <div class="form-text">
+        Please Note: Your CIBIL score will be verified before approval.
+      </div>
+    </div>
+  </div>
+  <div class="row p-3">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Proceed&nbsp; -></button>
+      </div>
+    </div>
+  </div>
+</form>

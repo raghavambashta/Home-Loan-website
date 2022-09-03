@@ -1,0 +1,50 @@
+<div class="area">
+  <div class="main_wrapper">
+    <div class="container">
+      <section class="calmain">
+        <div class="calcontent">
+          <div>
+            <mat-card id="card">
+              <h2 class="text-center">Eligibility Calculator</h2>
+              <table class="eligible">
+                <tr class="table-1">
+                  <td id="head">Monthly Income</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      style="margin-left: 150px"
+                      #incomeRange
+                      type="text"
+                      (ngModelChange)="setEligibility(incomeRange.value)"
+                      [(ngModel)]="income"
+                      min="1000"
+                      max="100000"
+                    />
+                  </td>
+                </tr>
+              </table>
+              <button
+                style="
+                  margin-top: 20px;
+                  margin-left: 190px;
+                  margin-bottom: 20px;
+                "
+                class="temp"
+                mat-raised-button
+                color="primary"
+                (click)="div()"
+              >
+                Calculate
+              </button>
+
+              <div id="head">
+                <span>Eligible Amount :</span>
+                <span style="margin-left: 20px">Rs. {{ num3 }}</span>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

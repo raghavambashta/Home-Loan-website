@@ -1,0 +1,73 @@
+<form
+  class="border p-3 rounded-3"
+  style="background-color: #fefbf6"
+  [formGroup]="loginForm"
+  (ngSubmit)="loginSubmitted(login)"
+>
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Login</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="id" class="form-label">Credential Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="id"
+        formControlName="id"
+        [(ngModel)]="login.Id"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="Id.errors?.['required'] && (Id.dirty || Id.touched) "
+      >
+        Email is required.
+      </div>
+    </div>
+    <div class="col mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pdw"
+        formControlName="pwd"
+        [(ngModel)]="login.Password"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="PWD.errors?.['required'] && (PWD.dirty || PWD.touched)"
+      >
+        Password is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          style="
+            background-color: #277bc0;
+            color: #fefbf6;
+            border-style: none;
+            border-radius: 5px;
+            height: 40px;
+          "
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <span>Don't have an account?&nbsp;</span>
+      <a routerLink="/register">Register now!</a>
+    </div>
+  </div>
+</form>

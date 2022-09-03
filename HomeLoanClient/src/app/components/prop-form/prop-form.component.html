@@ -1,0 +1,152 @@
+<form
+  style="background-color: #fefbf6"
+  class="border p-3 rounded-3"
+  [formGroup]="propForm"
+  (ngSubmit)="propSubmitted(prop)"
+>
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Property Details</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="pid" class="form-label">User Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="pid"
+        [(ngModel)]="prop.PId"
+        formControlName="pid"
+      />
+    </div>
+    <div class="col mb-3">
+      <label for="cid" class="form-label">Credendial Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cid"
+        formControlName="cid"
+        [(ngModel)]="prop.CId"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="name" class="form-label">Property Type</label>
+      <select
+        name="name"
+        class="form-control"
+        id="name"
+        [(ngModel)]="prop.Name"
+        formControlName="name"
+      >
+        <option value="Flat">Apartment</option>
+        <option value="Plot">Plot</option>
+        <option value="House">House</option>
+      </select>
+    </div>
+
+    <div class="col mb-3">
+      <label for="Locality" class="form-label">Locality</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Locality"
+        formControlName="Locality"
+        [(ngModel)]="prop.Locality"
+      />
+    </div>
+    <div
+      class="form-text text-danger"
+      *ngIf="Locality.errors?.['required'] && (Locality.touched || Locality.dirty)"
+    >
+      Locality is required.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="city" class="form-label">City</label>
+      <input
+        type="text"
+        class="form-control"
+        id="city"
+        [(ngModel)]="prop.City"
+        formControlName="city"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="City.errors?.['required'] && (City.touched || City.dirty)"
+      >
+        City is required.
+      </div>
+    </div>
+    <div class="col ps-3">
+      <label for="state" class="form-label">State</label>
+      <select
+        name="state"
+        class="form-control"
+        id="state"
+        [(ngModel)]="prop.State"
+        formControlName="state"
+      >
+        <option value="AN">Andaman and Nicobar Islands</option>
+        <option value="AP">Andhra Pradesh</option>
+        <option value="AR">Arunachal Pradesh</option>
+        <option value="AS">Assam</option>
+        <option value="BR">Bihar</option>
+        <option value="CH">Chandigarh</option>
+        <option value="CT">Chhattisgarh</option>
+        <option value="DN">Dadra and Nagar Haveli</option>
+        <option value="DD">Daman and Diu</option>
+        <option value="DL">Delhi</option>
+        <option value="GA">Goa</option>
+        <option value="GJ">Gujarat</option>
+        <option value="HR">Haryana</option>
+        <option value="HP">Himachal Pradesh</option>
+        <option value="JK">Jammu and Kashmir</option>
+        <option value="JH">Jharkhand</option>
+        <option value="KA">Karnataka</option>
+        <option value="KL">Kerala</option>
+        <option value="LA">Ladakh</option>
+        <option value="LD">Lakshadweep</option>
+        <option value="MP">Madhya Pradesh</option>
+        <option value="MH">Maharashtra</option>
+        <option value="MN">Manipur</option>
+        <option value="ML">Meghalaya</option>
+        <option value="MZ">Mizoram</option>
+        <option value="NL">Nagaland</option>
+        <option value="OR">Odisha</option>
+        <option value="PY">Puducherry</option>
+        <option value="PB">Punjab</option>
+        <option value="RJ">Rajasthan</option>
+        <option value="SK">Sikkim</option>
+        <option value="TN">Tamil Nadu</option>
+        <option value="TG">Telangana</option>
+        <option value="TR">Tripura</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="UT">Uttarakhand</option>
+        <option value="WB">West Bengal</option>
+      </select>
+    </div>
+    <div class="col ps-3">
+      <label for="pin" class="form-label">Pin Code</label>
+      <input
+        type="number"
+        class="form-control"
+        id="pin"
+        [(ngModel)]="prop.Pin"
+        formControlName="pin"
+      />
+    </div>
+  </div>
+  <div class="row p-3">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Proceed&nbsp; -></button>
+      </div>
+    </div>
+  </div>
+</form>

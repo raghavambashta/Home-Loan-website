@@ -1,0 +1,39 @@
+/* CARD Box */
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+.card-box .card {
+  width: 45%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-box .card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Card */
+.main {
+  padding-top: 100px;
+}
+.calmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calcontent {
+  width: 100%;
+  z-index: 1000;
+}
+
+.anss {
+  margin-top: 20px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #4e54c8;
+  color: #fff;
+}

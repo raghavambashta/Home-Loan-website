@@ -1,0 +1,146 @@
+<form
+  style="background-color: #fefbf6"
+  class="border p-3 rounded-3"
+  [formGroup]="docForm"
+  (ngSubmit)="docSubmitted(doc)"
+>
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Documents</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="did" class="form-label">User Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="dic"
+        [(ngModel)]="doc.DId"
+        formControlName="did"
+      />
+    </div>
+    <div class="col mb-3">
+      <label for="cid" class="form-label">Credendial Id</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cid"
+        formControlName="cid"
+        [(ngModel)]="doc.CId"
+      />
+    </div>
+    <div class="col mb-3">
+      <label for="aadhaar" class="form-label">Aadhaar Card</label>
+      <select
+        name="aadhaar"
+        class="form-control"
+        id="aadhaar"
+        [(ngModel)]="doc.Aadhaar"
+        formControlName="aadhaar"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Applied">Applied</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="pan" class="form-label">Pan Card</label>
+      <select
+        name="pan"
+        class="form-control"
+        id="pan"
+        [(ngModel)]="doc.Pan"
+        formControlName="pan"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Applied">Applied</option>
+      </select>
+    </div>
+
+    <div class="col mb-3">
+      <label for="voter" class="form-label">Voter Card</label>
+      <select
+        name="voter"
+        class="form-control"
+        id="voter"
+        [(ngModel)]="doc.Voter"
+        formControlName="voter"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Applied">Applied</option>
+      </select>
+    </div>
+    <div class="col mb-3">
+      <label for="salaryslip" class="form-label">Salary Slip</label>
+      <select
+        name="salaryslip"
+        class="form-control"
+        id="salaryslip"
+        [(ngModel)]="doc.SalarySlip"
+        formControlName="salaryslip"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Self">Self-Employed</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="loa" class="form-label">LOA</label>
+      <select
+        name="loa"
+        class="form-control"
+        id="loa"
+        [(ngModel)]="doc.Loa"
+        formControlName="loa"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="col mb-3">
+      <label for="noc" class="form-label">NOC</label>
+      <select
+        name="noc"
+        class="form-control"
+        id="noc"
+        [(ngModel)]="doc.Noc"
+        formControlName="noc"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="col mb-3">
+      <label for="agreement" class="form-label">Agreement</label>
+      <select
+        name="agreement"
+        class="form-control"
+        id="agreement"
+        [(ngModel)]="doc.Agreement"
+        formControlName="agreement"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Self">Applied</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,44 @@
+<h1
+  style="
+    color: brown;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-style: italic;
+  "
+>
+  Applicant Listing
+</h1>
+<div class="container" style="background-color: azure; border-radius: 7px">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Applicant Id</th>
+        <th>Mobile Number</th>
+        <th>Email Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cred of credlist">
+        <td>{{ cred.id }}</td>
+        <td>{{ cred.mobileNum }}</td>
+        <td>{{ cred.email }}</td>
+        <td>
+          <a href="http://localhost:64989/api/cred/userpage/1">Details</a>
+          &nbsp;&nbsp;&nbsp;
+          <div class="form-check form switch">
+            <input class="form-check-input" type="checkbox" id="chk" />
+            <label class="form-check-label" for="chk">Aproove</label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button
+    class="temp"
+    mat-raised-button
+    color="primary"
+    style="margin-left: 180px; margin-top: 5px; margin-bottom: 10px"
+  >
+    Submit
+  </button>
+</div>

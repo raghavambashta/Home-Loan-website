@@ -1,0 +1,26 @@
+/* Card */
+.main {
+  padding-top: 100px;
+}
+.calmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calcontent {
+  max-width: 500px;
+  width: 500px;
+  z-index: 1000;
+}
+
+.anss {
+  margin-top: 10px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+}
+
+.table-1 {
+  margin-bottom: 10px;
+}

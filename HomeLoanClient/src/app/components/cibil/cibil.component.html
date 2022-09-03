@@ -1,0 +1,43 @@
+<div class="area">
+  <div class="main_wrapper">
+    <div class="container">
+      <section class="calmain">
+        <div class="calcontent">
+          <div>
+            <mat-card id="card">
+              <h2 class="text-center">CIBIL Score</h2>
+              <table class="eligible">
+                <tr class="table-1">
+                  <td id="head">Pan Card Number</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      style="margin-left: 50px"
+                      type="text"
+                      [(ngModel)]="civil"
+                    />
+                  </td>
+                </tr>
+              </table>
+
+              <button
+                class="temp"
+                mat-raised-button
+                color="primary"
+                (click)="div()"
+                style="margin-left: 200px; margin-top: 10px"
+              >
+                Calculate
+              </button>
+              <table>
+                <tr class="table-1">
+                  <td id="head">Your CIBIL Score is : {{ num3 }}</td>
+                </tr>
+              </table>
+            </mat-card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

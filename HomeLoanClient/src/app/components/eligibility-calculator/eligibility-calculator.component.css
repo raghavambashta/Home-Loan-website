@@ -1,0 +1,21 @@
+.main {
+  padding-top: 100px;
+}
+.calmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calcontent {
+  max-width: 500px;
+  width: 500px;
+  z-index: 1000;
+}
+
+.anss {
+  margin-top: 20px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #4e54c8;
+  color: #fff;
+}
